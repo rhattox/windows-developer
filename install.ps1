@@ -1,26 +1,32 @@
-# Array of package IDs from winget
+# Array of package IDs with optional versions
 $packages = @(
-    "Microsoft.VisualStudioCode",
-    "Docker.DockerDesktop",
-    "Google.Chrome",
-    "7zip.7zip",
-    "Logitech.GHUB",
-    "Insomnia.Insomnia",
-    "Notepad++.Notepad++",
-    "JetBrains.IntelliJIDEA.Ultimate",
-    "Flameshot.Flameshot",
-    "Ditto.Ditto",
-    "CPUID.HWMonitor"
-
+    @{ Id = "Microsoft.VisualStudioCode";        Version = "" }
+    @{ Id = "Docker.DockerDesktop";              Version = "" }
+    @{ Id = "Google.Chrome";                     Version = "" }
+    @{ Id = "7zip.7zip";                         Version = "" }
+    @{ Id = "Logitech.GHUB";                     Version = "" }
+    @{ Id = "Insomnia.Insomnia";                 Version = "" }
+    @{ Id = "Notepad++.Notepad++";               Version = "" }
+    @{ Id = "Flameshot.Flameshot";               Version = "" }
+    @{ Id = "Ditto.Ditto";                       Version = "" }
+    @{ Id = "CPUID.HWMonitor";                   Version = "" }
+    @{ Id = "JetBrains.IntelliJIDEA.Ultimate";   Version = "2025.2" }
+    @{ Id = "JetBrains.Gateway";                 Version = "2025.2" }
 )
 
 foreach ($pkg in $packages) {
-    Write-Host "Installing $pkg..." -ForegroundColor Cyan
-    winget install --id $pkg --silent --accept-package-agreements --accept-source-agreements
+    $id = $pkg.Id
+    $ver = $pkg.Version
+
+    if ([string]::IsNullOrWhiteSpace($ver)) {
+        Write-Host "Installing latest $id..." -ForegroundColor Cyan
+        winget install --id $id --silent --accept-package-agreements --accept-source-agreements
+    }
+    else {
+        Write-Host "Installing $id version $ver..." -ForegroundColor Cyan
+        winget install --id $id --version $ver --silent --accept-package-agreements --accept-source-agreements
+    }
 }
-
-
-
 Stop-Service -Name "WSearch" -Force
 Set-Service -Name "WSearch" -StartupType Disabled
 
