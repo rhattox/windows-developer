@@ -9,7 +9,8 @@ $packages = @(
     "Notepad++.Notepad++",
     "JetBrains.IntelliJIDEA.Ultimate",
     "Flameshot.Flameshot",
-    "Ditto.Ditto"
+    "Ditto.Ditto",
+    "CPUID.HWMonitor"
 
 )
 
@@ -36,5 +37,6 @@ Write-Host "Installing Debian distribution..." -ForegroundColor Cyan
 wsl --install -d Debian
 
 Write-Host "Installation complete. Please restart your computer if prompted." -ForegroundColor Green
+
 
 reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
