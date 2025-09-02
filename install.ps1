@@ -10,6 +10,7 @@ $packages = @(
     @{ Id = "Flameshot.Flameshot";               Version = "" }
     @{ Id = "Ditto.Ditto";                       Version = "" }
     @{ Id = "CPUID.HWMonitor";                   Version = "" }
+    @{ Id = "qBittorrent.qBittorrent";           Version = "" }
     @{ Id = "JetBrains.IntelliJIDEA.Ultimate";   Version = "2025.2" }
     @{ Id = "JetBrains.Gateway";                 Version = "2025.2" }
 )
@@ -48,3 +49,4 @@ Write-Host "Installation complete. Please restart your computer if prompted." -F
 reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
 
 winget install --id=DEVCOM.JetBrainsMonoNerdFont  -e
+
