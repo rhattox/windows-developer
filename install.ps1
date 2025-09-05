@@ -45,6 +45,7 @@ wsl --set-default-version 2
 
 Write-Host "Installing Debian distribution..." -ForegroundColor Cyan
 wsl --install -d Debian
+wsl --install -d Ubuntu
 
 Write-Host "Installation complete. Please restart your computer if prompted." -ForegroundColor Green
 
@@ -54,5 +55,6 @@ reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\
 winget install --id=DEVCOM.JetBrainsMonoNerdFont  -e
 
 
-
-
+# Copy file from current directory to user's Documents folder
+Copy-Item -Path ".\.wslconfig" -Destination "$HOME" -Force
+Copy-Item -Path ".\.gitconfig" -Destination "$HOME" -Force
