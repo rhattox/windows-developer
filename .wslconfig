@@ -1,8 +1,4 @@
 # ============================================
-# Global WSL Configuration
-# This file controls WSL 2 behavior for ALL distros.
-# ============================================
-
 [wsl2]
 ############################################################
 #  RESOURCE ALLOCATION
@@ -51,7 +47,7 @@ swapFile=C:\\WSL\\swap.vhdx
 # Allow WSL processes to be accessed via "localhost" from Windows
 # Default: true
 #localhostForwarding=true
-#localhostForwarding=false
+localhostForwarding=true
 
 # Networking mode: controls how WSL connects to your network
 # Options:
