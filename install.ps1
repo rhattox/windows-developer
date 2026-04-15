@@ -1,13 +1,14 @@
 # Array of package IDs with optional versions
 $packages = @(
     @{ Id = "Microsoft.VisualStudioCode";        Version = "" }
+    @{ Id = "Microsoft.WindowsTerminal";         Version = "" }
     @{ Id = "Docker.DockerDesktop";              Version = "" }
     @{ Id = "Google.Chrome";                     Version = "" }
     @{ Id = "7zip.7zip";                         Version = "" }
     @{ Id = "Logitech.GHUB";                     Version = "" }
     @{ Id = "VideoLAN.VLC";                      Version = "" }
     @{ Id = "git.git";                           Version = "" }
-    @{ Id = "Insomnia.Insomnia";                 Version = "" }
+    @{ Id = "Postman.Postman";                   Version = "" }
     @{ Id = "Notepad++.Notepad++";               Version = "" }
     @{ Id = "Flameshot.Flameshot";               Version = "" }
     @{ Id = "Ditto.Ditto";                       Version = "" }
@@ -16,6 +17,8 @@ $packages = @(
     @{ Id = "qBittorrent.qBittorrent";           Version = "" }
     @{ Id = "JetBrains.IntelliJIDEA.Ultimate";   Version = "2025.2" }
     @{ Id = "JetBrains.Gateway";                 Version = "2025.2" }
+    @{ Id = "Valve.Steam";                       Version = "" }
+    @{ Id = "Discord.Discord";                   Version = "" }
 )
 
 foreach ($pkg in $packages) {
