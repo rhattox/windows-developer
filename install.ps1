@@ -17,6 +17,7 @@ $packages = @(
     @{ Id = "qBittorrent.qBittorrent";           Version = "" }
     @{ Id = "JetBrains.IntelliJIDEA.Ultimate";   Version = "2025.2" }
     @{ Id = "JetBrains.Gateway";                 Version = "2025.2" }
+    @{ Id = "JetBrains.WebStorm";                Version = "2025.2" }
     @{ Id = "Valve.Steam";                       Version = "" }
     @{ Id = "Discord.Discord";                   Version = "" }
 )
