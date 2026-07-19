@@ -21,6 +21,7 @@ $packages = @(
     @{ Id = "Valve.Steam";                       Version = "" }
     @{ Id = "Discord.Discord";                   Version = "" }
     @{ Id = "LesFerch.WinSetView";               Version = "" }
+    @{ Id = "Microsoft.PowerToys";               Version = "" }
 )
 
 foreach ($pkg in $packages) {
